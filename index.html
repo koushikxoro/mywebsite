@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Koushik Mondal</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@500&family=Source+Code+Pro:ital,wght@1,700&family=Varela+Round&display=swap" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script  src="script/jquery.js"></script>
+        
+        <script src="script/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    </head>
+    <body onload="checkWidth()"  onresize="checkWidth()">
+    <!--Nav bar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-3">
+            <a class="navbar-brand" href="index.html">Koushik Mondal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon "></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" onclick="scr('hm')">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " onclick="scr('abtme')">About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="scr('jor')">My Journey</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="scr('res')">Resume</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="scr('prjt')">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="scr('cnt')">Contact Info</a>
+                </li>
+      
+      
+               </ul>
+    
+            </div>
+
+        </nav>
+<!--Navbar end-->   
+
+<!-- Site main part-->
+    <div id="particles-js">
+    <!--Banner area-->
+      <section class="site-banner banner" id="hm">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 hideme" id="small-intro">
+              <h1 class="display-1 hey" id="hey">Hey,</h1>
+              <h1 class="display-3 name">I am Koushik Mondal</h1>
+              <h1 class="display-4 details">IT Engineer Specialist</h1>
+              <h1 class="display-1 details">Infosys</h1>
+                
+            </div>
+            <div class="col-md-12 col-lg-6 imga hideme" >
+              <div class="circle animate__animated animate__rotateIn">
+              <img src="images/circle-cropped.png"  class="img-main"  >
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!--Banner end-->
+    <!--button area-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 cl hideme" id="btns">
+          <button type="button" class="btn btn-outline-primary btn-lg  " data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">HIRE ME</button>
+          <button type="button" class="btn btn-outline-primary btn-lg  " onclick="dwnl()">DOWNLOAD MY CV</button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Kindly Fill this up</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" >
+                  <form action="script/action_page_modal.php" class="needs-validation" method="POST">
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Company Name:</label>
+                      <input type="text" class="form-control"  id="name" placeholder="Company name" name="n1" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Designation Offered:</label>
+                      <input type="text" class="form-control"  id="do" placeholder="Kindly enter.." name="do" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Salary Offered:</label>
+                      <input type="text" class="form-control"  id="so" placeholder="Kindly enter the salary and currency" name="so" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Contact Person Name:</label>
+                      <input type="text" class="form-control"  id="cpn" placeholder="Kindly enter..." name="cpn" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Contact Person Phone Numebr:</label>
+                      <input type="text" class="form-control"  id="cppn" placeholder="Kindly enter" name="cppn" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Any message:</label>
+                      <textarea class="form-control" id="message-text" name="message-text"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </form>
+                </div>
+                <div class="modal-footer" style="text-align: center;">
+                  <p>Thanks for your response.</p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--button area end-->
+    <!--introduction-->
+    <div class="container-fluid intro" id="abtme">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 jumbotron hideme" style="text-align: center;" id="about-me-text">
+          <h1 class="display-1">About me</h1>
+          <p style="font-family: 'Great Vibes', cursive; font-size:20px;">I have blended my passion with emotion to get extra ordinary output in life, though I love programming from the core of my heart, I don’t think twice before adventuring in the mother earth. I have lots of hobbies like music composing, animation making but what I love most is trekking, previous year that is on 2019 December I went for a trek to Bhramatal, Uttarakhand. Obviously we enjoyed a lot but most importantly I have learnt the value of this precious life. I believe in making most out of every precious second so whenever I am free, I am habituated to make myself busy in learning technologies that come in market, as we know IT industry is progressing very fast I have the ability to adapt
+            myself to daily changes. I focus about today by putting the learning that I have got from yesterday and I have high aspiration for tomorrow.</p>
+
+
+        </div>
+        <div class="col-md-12 col-lg-6 hideme" id="about-me-crsl">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="images/IMG_2629.JPG" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/IMG_2650.JPG" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/IMG_2655.JPG" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--introduction end-->
+    <!--My journey-->
+    <div class="container-fluid journey jumbotron " style="padding-top: 50px;" id="jor">
+      <div class="row" id="insti">
+        <div class="col-lg-12" style="text-align: center;">
+          <h1 class="display-1 hideme">My Journey</h1>
+        </div>
+        <div class="row">
+        <div class="col-lg-8 col-md-6 col-sm-12 hideme">
+          <p style="font-family: 'Great Vibes', cursive; font-size:20px;">
+            Frankly, speaking you will get very few candidates who have changed school every now and then, I am one of those very few candidates who have changed school frequently it is not that I had some problem… LOL…. but my family condition made me to do so as, I have studied in all types of school from government to high class private schools but in the end what I learned is that it’s student like us who makes the school not the other way round. I have done my 10th standard from Assembly of God church school, Ukhra in 2013 and there I secured 91%, after that I moved to DAV Model school Durgapur for science stream but due to my family problems I suffered from mental depression, and failed to achieve what I aimed for i.e., IIT I thought that every thing has ended in my life so I have taken a gap of 1 year for preparing  for IIT but due to sheer pressure I failed again and went for engineering in a state government college….for information sake I have scored 87.67 % in 12th.
+          </p>
+        </div> 
+        <div class="col-lg-4 col-md-6 col-sm-12 hideme">
+          <img src="images/Unknown" class="img-thumbnail se" alt="Cinque Terre" id="se" onmouseover="addCSS(this.id)">
+        </div>
+        </div>
+        <div class="row" style="padding-top:50px;">
+        <div class="col-lg-4 col-md-6 col-sm-12 hideme">
+          <img src="images/rstc3.jpg" class="img-thumbnail se" alt="Cinque Terre" id="se1" onmouseover="addCSS(this.id)">
+        </div>
+        <div class="col-lg-8 col-md-6 col-sm-12 hideme" id="fi">
+          <p style="font-family: 'Great Vibes', cursive; font-size:20px;">
+            Regarding my college life I have lots to say, I entered college as if I am a failure being a student from general category I have already faced lots of “struggle”…LOL… . I didn’t have any idea how my engineering life would be firstly I thought that if I only focus on my curriculum I will win the race, but it turned out to be very different, I learnt making projects doing programming is the first thing that you should do in your daily life first year passed too swiftly and I scored 7.98 YGPA, in my second year I have made a plan to explore the culture of engineering so I went to different IIT colleges fest and learnt there culture but somehow latter on I realised that it is just waste of time, in second year I have  scored a YGPA of 8.54. Third year was relatively easy as I had clear goals ahead of me, I had started doing projects, competitive coding etc, but again time flied away too swiftly by hanging out with friends and I have scored a YGPA of 8.79, 4th year was mostly based on my placement preparation, the first offer that I got was from Infosys as a system engineer role which I later upgraded it to a higher position, I had also different offers from IBM and TCS and in 4th year my YGPA was 9.33, so my DGPA stands at 8.69. 
+          </p>
+        </div>
+        </div>
+        </div> 
+      </div>
+    
+    <!--My journeny end-->
+    <!--skills-->
+    <div class="container" id="res">
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-lg-12 hideme">
+        <h1 class="display-1" style="text-align: center;">Skills</h1>
+      </div>
+      
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          
+            <img src="images/adventure-sports-500x500.jpg" class="img-thumbnail" alt="Lights" style="width:100%" onmouseover="addStyle(this.id)" onmouseout1="out(this.id)" id="as">
+            <div class="caption">
+              <p style="text-align: center; font-family: 'Montserrat', sans-serif;">Adventrous Sports</p>
+            </div>
+          
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          
+            <img src="images/AQD_Machine-Learning_1200x628.png" class="img-thumbnail" alt="Nature" style="width:100%" onmouseover="addStyle(this.id)" id="ml">
+            <div class="caption">
+              <p style="text-align: center; font-family: 'Montserrat', sans-serif;">Machine Learning</p>
+            </div>
+          
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          
+            <img src="images/Unknown-2.png" alt="Fjords" class="img-thumbnail" style="width:100%" onmouseover="addStyle(this.id)" id="wd">
+            <div class="caption">
+              <p style="text-align: center; font-family: 'Montserrat', sans-serif;">Web Development</p>
+            </div>
+          
+        </div>
+      </div>
+      
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          
+            <img src="images/cpp-library1.png" alt="Fjords" class="img-thumbnail" style="width:100%" onmouseover="addStyle(this.id)" id="cp">
+            <div class="caption">
+              <p style="text-align: center; font-family: 'Montserrat', sans-serif;">Competitive Programming</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--skills end-->
+    <!--Experience and courses-->
+    <section class="brand-area">
+      <div class="container-fluid ">
+          <div class="row">
+              <div class=" col-lg-6 col-md-12 hideme"  >
+                <div class="row" style="justify-content: center;" id="work-experience"> 
+                  <div class="column">
+                    <div data-toggle="modal" data-target="#exampleModalCenter" onclick="modalFunctio(this.id)" id="bh" onmouseover="addCSS(this.id)"><img src="images/BHEL_Logo_ED.jpg" style="width:100%" class="img-rounded"></div>
+                    <div data-toggle="modal" data-target="#exampleModalCenter" onclick="modalFunctio(this.id)" id="js" onmouseover="addCSS(this.id)"><img src="images/images-2.png" style="width:100%" class="img-rounded"></div>
+                    <div data-toggle="modal" data-target="#exampleModalCenter" onclick="modalFunctio(this.id)" id="np" onmouseover="addCSS(this.id)"><img src="images/nptel.jpg" style="width:100%" class="img-rounded"></div>
+                    
+                  </div>
+                  <div class="column">
+                    <div data-toggle="modal" data-target="#exampleModalCenter" onclick="modalFunctio(this.id)" id="nit" onmouseover="addCSS(this.id)"><img src="images/images.png" style="width:100%" class="img-rounded"></div>
+                    <div data-toggle="modal" data-target="#exampleModalCenter" onclick="modalFunctio(this.id)" id="dm" onmouseover="addCSS(this.id)"><img src="images/images.jpeg" style="width:100%" class="img-rounded"></div>
+                    <div data-toggle="modal" data-target="#exampleModalCenter" onclick="modalFunctio(this.id)" id="py" onmouseover="addCSS(this.id)"><img src="images/alison_courseware_intro_423.jpg" style="width:100%" class="img-rounded"></div>
+                    
+                  </div>  
+                  <div class="column">
+                    <div data-toggle="modal" data-target="#exampleModalCenter" onclick="modalFunctio(this.id)" id="nd" onmouseover="addCSS(this.id)"><img src="images/1*DF0g7bNW5e2z9XS9N2lAiw.jpeg" style="width:100%" class="img-rounded"></div>
+                    <div data-toggle="modal" data-target="#exampleModalCenter" onclick="modalFunctio(this.id)" id="react" onmouseover="addCSS(this.id)"><img src="images/1*y6C4nSvy2Woe0m7bWEn4BA.png" style="width:100%" class="img-rounded"></div>
+                    <div data-toggle="modal" data-target="#exampleModalCenter" onclick="modalFunctio(this.id)" id="cpp" onmouseover="addCSS(this.id)"><img src="images/Unknown-3.jpeg" style="width:100%" class="img-rounded"></div>
+                   
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                      
+                    </div>
+                    <div class="modal-footer" style="justify-content: center;"> 
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 hideme" id="callbox">
+                  <div class="jumbotron col-lg-12 col-md-12" id="call-now" >
+                      
+                          <h1 style="text-align: center; font-family: 'Montserrat', sans-serif;" >Current Offers</h1>
+                    <div class="col-lg-12 col-md-12">
+                      <p style="font-family: 'Abel', sans-serif; font-size: 19px;"><img src="images/Infosys_AN20.png"> Designation: System Engineer Specialist</p>
+                      
+                    </div>  
+                    <div class="col-lg-12 col-md-12">
+                      <p style="font-family: 'Abel', sans-serif; font-size: 19px;"><img src="images/FmvKl-IV_400x400.png"> Designation: Associate System Engineer</p>
+                    </div>  
+                    <div class="col-lg-12 col-md-12">
+                      <p style="font-family: 'Abel', sans-serif; font-size: 19px;"><img src="images/0.jpeg"> Designation: Assistant System Engineer</p>
+                    </div>   
+                          
+                      
+                      
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+    <!--Experience End-->
+    <!--Project start-->
+    <section class="project-area" id="prjt">
+      <div class="container">
+          <div class="project-title pb-5 hideme">
+              <h1 class="text-uppercase title-h1" style="text-align: center; font-family: 'Varela Round', sans-serif; font-size: 54px;">My Projects</h1>
+              
+          </div>
+
+          <div class="button-group hideme" id="myBtnContainer" style="text-align: center; margin-bottom: 50px;">
+              <button type="button" onclick="filterSelection('all')" class="btn btn-secondary">All</button>
+              <button type="button" onclick="filterSelection('popular')" class="btn btn-secondary">Popular</button>
+              <button type="button" onclick="filterSelection('latest')" class="btn btn-secondary">Latest</button>
+              <button type="button" onclick="filterSelection('following')" class="btn btn-secondary">Following</button>
+              
+          </div>
+
+          <div class="row grid">
+              <div class="col-lg-4 col-md-6 col-sm-12 filterDiv popular latest hideme" >
+                  <div class="our-project">
+                      <div class="img" onmouseover="addStyle(this.id)" id="wi">
+                          <a class="test-popup-link" href="https://github.com/mtdescentis/project_factoids.git">
+                              <img src="images/wiki-2.jpg" alt="portfolio-1" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="title py-4">
+                          <h4 class="text-uppercase">Wikipedia Data Analysis</h4>
+                          <span class="text-secondary">Latest, Portfolio</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 filterDiv latest popular hideme" >
+                  <div class="our-project">
+                      <div class="img" onmouseover="addStyle(this.id)" id="grb">
+                          <a class="test-popup-link" href="https://github.com/letsdoitworld/wade-ai.git">
+                              <img src="images/garbage.jpg" alt="portfolio-2" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="title py-4">
+                          <h4 class="text-uppercase">Garbage Detection</h4>
+                          <span class="text-secondary">Popular, Portfolio</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 filterDiv latest popular hideme" >
+                  <div class="our-project">
+                      <div class="img" onmouseover="addStyle(this.id)" id="fba">
+                          <a class="test-popup-link" href="https://github.com/yogeshk4/face-recognition-based-attendance-system.git">
+                              <img src="images/attaendance.jpg" alt="portfolio-3" class="img-fluid" >
+                          </a>
+                      </div>
+                      <div class="title py-4">
+                          <h4 class="text-uppercase">Face Based Attendance</h4>
+                          <span class="text-secondary">Popular, Portfolio</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 filterDiv latest following hideme" >
+                  <div class="our-project">
+                      <div class="img" onmouseover="addStyle(this.id)" id="hr">
+                          <a class="test-popup-link" href="https://github.com/anaustinbeing/haar-cascade-files.git">
+                              <img src="images/haar.png" alt="portfolio-4" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="title py-4">
+                          <h4 class="text-uppercase">Haar Cascade Features</h4>
+                          <span class="text-secondary">Upcoming, Portfolio</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 filterDiv popular latest hideme" >
+                  <div class="our-project">
+                      <div class="img" onmouseover="addStyle(this.id)" id="wb">
+                          <a class="test-popup-link" href="./img/portfolio/p5.jpg">
+                              <img src="images/website.jpg" alt="portfolio-5" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="title py-4">
+                          <h4 class="text-uppercase">Personal Website</h4>
+                          <span class="text-secondary">Upcoming, Portfolio</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 filterDiv popular hideme" >
+                  <div class="our-project">
+                      <div class="img" onmouseover="addStyle(this.id)" id="gg">
+                          <a class="test-popup-link" href="https://github.com/koushikxoro/gridGame.git">
+                              <img src="images/grid-game.jpg" alt="portfolio-6" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="title py-4">
+                          <h4 class="text-uppercase">Grid Game</h4>
+                          <span class="text-secondary">Following, Portfolio</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 filterDiv following hideme" >
+                  <div class="our-project">
+                      <div class="img" onmouseover="addStyle(this.id)" id="hm">
+                          <a class="test-popup-link" href="https://github.com/richik1997/bhel_bhawan.git">
+                              <img src="images/hotel-2.jpg" alt="portfolio-7" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="title py-4">
+                          <h4 class="text-uppercase">Hotel Management</h4>
+                          <span class="text-secondary">Following, Portfolio</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 filterDiv following hideme" >
+                  <div class="our-project">
+                      <div class="img" onmouseover="addStyle(this.id)" id="hms">
+                          <a class="test-popup-link" href="https://github.com/richik1997/bhel_bhawan.git">
+                              <img src="images/hospital-2.jpg" alt="portfolio-8" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="title py-4">
+                          <h4 class="text-uppercase">Hospital Management</h4>
+                          <span class="text-secondary">Following, Portfolio</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 filterDiv following hideme" >
+                  <div class="our-project">
+                      <div class="img" onmouseover="addStyle(this.id)" id="adr">
+                          <a class="test-popup-link" href="https://github.com/arduino/Arduino.git">
+                              <img src="images/adruino.jpg" alt="portfolio-9" class="img-fluid">
+                          </a>
+                      </div>
+                      <div class="title py-4">
+                          <h4 class="text-uppercase">Adruino Uno Projects</h4>
+                          <span class="text-secondary">Following, Portfolio</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  
+
+
+    <!--project end-->
+    <!--Form area-->
+    <section style="margin-top: 50px;" id="cnt">
+      <h1 class="display-1 hideme" style="text-align: center;">Leave a message...</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 hideme">
+            <form action="script/action_page.php" class="needs-validation" method="POST" >
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Name" name="n1" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="contactno">Contact Number</label>
+                  <input type="text" class="form-control" id="contactno" placeholder="Contact Number" name="cno" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mail">Mail</label>
+                <input type="email" class="form-control" id="mail" placeholder="example@example.in" name="email" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="company">Company</label>
+                  <input type="text" class="form-control" id="company" name="cmp" placeholder="Enter your company name">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="desg">Designation</label>
+                  <input type="text" class="form-control" id="desg" name="desg" placeholder="Enter your designation">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Kindly enter your message</label>
+                <textarea class="form-control" id="message" rows="5" name="msg" placeholder="message...." required></textarea>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <button type="submit" class="btn btn-primary">Submit Details</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Form-->
+    <!--Footer area-->
+    <section>
+      <div class="container-fluid" style="width: 100%;">
+        <div class="row" style="background-color: black;color: blanchedalmond;">
+          <div class="col-lg-6 col-md-6 col-sm-12" style="justify-content: center; margin-top: 50px; padding-left: 10%;">
+           <p><i class="fa fa-map" aria-hidden="true"></i>   6/16 Tilak Road, Durgapur, India</p>
+            
+            <p><i class="fa fa-phone" aria-hidden="true"></i>   +91-8967208403</p>
+            <p><i class="fa fa-envelope" aria-hidden="true"></i>   mondalkoushik508@gmail.com</p>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12" style="justify-content: center; margin-top: 50px; padding-left: 10%;">
+            <p>Thanks for visiting my website, lets get coonected via social media.</p>
+            <p>Keep in touch with me through the below links.</p>
+            <p style="font-size: 35px;"> 
+              <i class="fa fa-facebook-official" aria-hidden="true"></i> 
+              <a href="https://www.instagram.com/koushikreloaded/?hl=en" style="color: blanchedalmond;"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com/channel/UCQ1qLSz1ew9E64XD2-9VPNQ?view_as=subscriber" style="color: blanchedalmond;"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+              <a href="https://github.com/koushikxoro/" style="color: blanchedalmond;"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/koushik-mondal-b7a35312b/" style="color: blanchedalmond;"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+              <a href="https://twitter.com/Koushik08932388" style="color: blanchedalmond;"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer end-->
+    </div>
+       
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        
+        
+       
+       
+    </body>
+</html>
