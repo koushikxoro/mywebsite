@@ -1,0 +1,144 @@
+
+.navbar-nav > li{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.hey{
+    color:blue;
+    
+    font-weight: bold;
+}
+
+.name{
+    color:blue;
+    
+    font-weight: bold;
+    
+}
+
+.details{
+    color:blue;
+    
+    font-weight: bold;
+    
+}
+.site-banner{
+    padding-top: 50px;
+}
+.circle{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: blue;
+    animation-duration: 2s;
+    
+    animation-name: clr;
+    border-radius: 50%;
+    width:500px;
+    height: 500px;
+}
+.img-main{
+    width:480px;
+    height:480px ;
+    display: block;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.intro{
+    padding-top: 160px;
+}
+.banner{
+    padding-top: 100px;
+}
+.cl > button{
+    margin-top: 40px;
+    margin-right: 50px;
+    background-color: blue;
+    color:whitesmoke;
+}
+.cl > button:hover
+{
+    animation-name: kou;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes kou{
+    0%{
+        background-color: blue;
+    }
+    
+    100%{
+        border-color: red;
+        background-color: red;
+    }
+}
+.journey
+{
+    margin-top: 100px;
+}
+.brand-area{
+    margin-top:200px;
+}
+
+.first{
+    padding-left: 40px;
+}
+.se{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  
+  .filterDiv{
+      display: none;
+      
+  }
+  .show{
+    display: block;
+}
+  
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 400px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 300px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  .project-area{
+      margin-top: 120px;
+  }
+  .hidden { opacity: 0; }
